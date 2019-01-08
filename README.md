@@ -36,5 +36,9 @@ This project contains three main parts: ETL Pipeline, Machine Learning Pipeline 
 
 ### Screenshots of the web app
 
+![image-20190108135021589](https://ws2.sinaimg.cn/large/006tNc79gy1fyz4qbvm0tj31o40u00v5.jpg)
+
+![image-20190108134950399](https://ws2.sinaimg.cn/large/006tNc79gy1fyz4pu37anj31si0o278d.jpg)
+
 ![img](https://ws2.sinaimg.cn/large/006tNc79gy1fyxt8ftmy5j30uk0p0wgm.jpg)
 
