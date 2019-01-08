@@ -43,6 +43,11 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    # Calculate percentage of tagged category 
+    cate_per = df.drop(['id', 'message', 'original', 'genre'], axis = 1).sum()/ df.shape[0]
+    cate_per.sort_values(ascending=False, inplace=True)
+    cate_names = list(cate_per.index)
+    
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -61,6 +66,26 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+        
+        {
+            'data': [
+                Bar(
+                    x=cate_names,
+                    y=cate_per
+                )
+            ],
+
+            'layout': {
+                'title': 'Percentage of tagged category',
+                'yaxis': {
+                    'title': "Percentage"
+                },
+                'xaxis': {
+                    'title': "Category",
+                    'tickangle' : -45
                 }
             }
         }
